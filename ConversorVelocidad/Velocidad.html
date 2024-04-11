@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de Velocidad</title>
+        <link rel="stylesheet" type="text/css" href="Velocidad.css">
+        <link rel="icon" href="Velocidad.png">
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Conversor de Velocidad</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!--SECCION 1-->
+                <section class="section1">
+                    <h3>Conversor de Velocidad</h3>
+                    <hr>
+                    <form class="form1">
+                        <div>
+                            De
+                            <input type="text" id="NumeroInicial">
+                            <select id="select1">
+                                <option value="MetrosPorSegundo">Metros por Segundo</option>
+                                <option value="KilometrosPorHora">Kilómetros por Hora</option>
+                                <option value="KilometrosPorSegundo">Kilómetros por Segundo</option>
+                                <option value="MillasPorSegundo">Millas por Segundo</option>
+                                <option value="MillasPorHora">Millas por Hora</option>
+                                <option value="Nudos">Nudos</option>
+                                <option value="PiesPorSegundo">Pies por Segundo</option>
+                            </select>
+                            A
+                            <select id="select2">
+                                <option value="MetrosPorSegundo">Metros por Segundo</option>
+                                <option value="KilometrosPorHora">Kilómetros por Hora</option>
+                                <option value="KilometrosPorSegundo">Kilómetros por Segundo</option>
+                                <option value="MillasPorSegundo">Millas por Segundo</option>
+                                <option value="MillasPorHora">Millas por Hora</option>
+                                <option value="Nudos">Nudos</option>
+                                <option value="PiesPorSegundo">Pies por Segundo</option>
+                            </select>
+                        </div>
+                        <div><input type="text" class="Resultado" id="Resultado" readonly></div>
+                        <input type="button" value="Calcular" onclick="calcularVelocidad(); llenarTablaVelocidad()">
+                    </form>
+                </section>
+
+                <!--SECCION 2-->
+
+                <section class="section2">
+                    <h3>Tabla de conversion general</h3>
+                    <div class="subdiv">
+                        <input type="text" id="num" readonly>
+                        <input type="text" id="unidad" readonly>
+                    </div>
+                    <hr>
+                    <form class="form2">
+                        <div><label>Metros por Segundo</label><input type="text" id="MetrosPorSegundo" readonly></div>
+                        <div><label>Kilómetros por Hora</label><input type="text" id="KilometrosPorHora" readonly></div>
+                        <div><label>Kilómetros por Segundo</label><input type="text" id="KilometrosPorSegundo" readonly></div>
+                        <div><label>Millas por Segundo</label><input type="text" id="MillasPorSegundo" readonly></div>
+                        <div><label>Millas por Hora</label><input type="text" id="MillasPorHora" readonly></div>
+                        <div><label>Nudos</label><input type="text" id="Nudos" readonly></div>
+                        <div><label>Pies por Segundo</label><input type="text" id="PiesPorSegundo" readonly></div>
+                    </form>
+                </section>
+                <section class="section3">
+                    <div>
+                        <h2>Unidades de Velocidad y Conversiones</h2>
+                        <p>El conversor de velocidad te permite convertir entre diversas unidades de medida. Aquí tienes una lista de las unidades disponibles:</p>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li><strong>Metros por Segundo (m/s):</strong> La unidad básica de velocidad en el sistema internacional.</li>
+                        <li><strong>Kilómetros por Hora (km/h):</strong> La velocidad comúnmente utilizada en carreteras y señales de tráfico.</li>
+                        <li><strong>Kilómetros por Segundo (km/s):</strong> Una unidad más rápida, comúnmente utilizada en contextos científicos.</li>
+                        <li><strong>Millas por Segundo (mi/s):</strong> La velocidad en millas por segundo.</li>
+                        <li><strong>Millas por Hora (mi/h):</strong> La velocidad en millas por hora, comúnmente utilizada en los Estados Unidos.</li>
+                        <li><strong>Nudos (kt):</strong> Una unidad de velocidad utilizada en navegación marítima y aérea.</li>
+                        <li><strong>Pies por Segundo (ft/s):</strong> La velocidad en pies por segundo, utilizada en algunos contextos de ingeniería.</li>
+                    </ul>
+                    <hr>
+                    <p>Para convertir entre estas unidades, simplemente ingresa la cantidad en la unidad de origen y obtén los resultados en las unidades deseadas. La calculadora realiza automáticamente los cálculos necesarios para que puedas trabajar con distintas escalas de velocidad de manera fácil y rápida.</p>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script src="Velocidad.js"></script>
+    </body>
+</html>

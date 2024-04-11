@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de Temperatura</title>
+        <link rel="stylesheet" type="text/css" href="Temperatura.css">
+        <link rel="icon" href="temperatura.png">
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Conversor de Temperatura</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!--SECCION 1-->
+                <section class="section1">
+                    <h3>Conversor de Temperatura</h3>
+                    <hr>
+                    <form class="form1">
+                        <div>
+                            De
+                            <input type="text" id="NumeroInicial">
+                            <select id="select1">
+                                <option value="Celsius">Celsius </option>
+                                <option value="Fahrenheit">Fahrenheit </option>
+                                <option value="Kelvin">Kelvin</option>
+                                <option value="Rankine">Rankine </option>
+                                <option value="Réaumur">Réaumur </option>
+                            </select>
+                            A
+                            <select id="select2">
+                                <option value="Celsius">Celsius</option>
+                                <option value="Fahrenheit">Fahrenheit </option>
+                                <option value="Kelvin">Kelvin</option>
+                                <option value="Rankine">Rankine </option>
+                                <option value="Réaumur">Réaumur </option>
+                            </select>
+                        </div>
+                        <div><input type="text" class="Resultado" id="Resultado" readonly></div>
+                        <input type="button" value="Calcular" onclick="calcularTemperatura(); llenarTablaTemperatura();">
+                    </form>
+                </section>
+
+                <!--SECCION 2-->
+
+                <section class="section2">
+                    <h3>Tabla de conversion general</h3>
+                    <div class="subdiv">
+                        <input type="text" id="num" readonly>
+                        <input type="text" id="unidad" readonly>
+                    </div>
+                    <hr>
+                    <form class="form2">
+                        <div><label>Celsius</label><input type="text" id="Celsius" readonly></div>
+                        <div><label>Fahrenheit</label><input type="text" id="Fahrenheit" readonly></div>
+                        <div><label>Kelvin</label><input type="text" id="Kelvin" readonly></div>
+                        <div><label>Rankine</label><input type="text" id="Rankine" readonly></div>
+                        <div><label>Réaumur</label><input type="text" id="Reaumur" readonly></div>
+                    </form>
+                    
+                </section>
+                <section class="section3">
+                    <div>
+                        <h2>Unidades de Temperatura y Conversiones</h2>
+                        <p>El conversor de temperatura te permite convertir entre diversas unidades de medida. Aquí tienes una lista de las unidades disponibles:</p>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li><strong>Celsius (°C):</strong> La escala centígrada comúnmente utilizada en la mayoría de los países del mundo.</li>
+                        <li><strong>Fahrenheit (°F):</strong> Utilizada en los Estados Unidos y algunos otros países, con 32°F como punto de congelación del agua y 212°F como punto de ebullición.</li>
+                        <li><strong>Kelvin (K):</strong> La unidad base del sistema internacional de unidades de temperatura, donde 0 K es el cero absoluto.</li>
+                        <li><strong>Rankine (°R):</strong> Utilizada en algunas aplicaciones de ingeniería, especialmente en los Estados Unidos, es la escala Fahrenheit absoluta.</li>
+                        <li><strong>Réaumur (°Ré):</strong> Una escala histórica utilizada principalmente en Europa, donde 0°Ré es el punto de congelación del agua y 80°Ré es el punto de ebullición.</li>
+                    </ul>
+                    <hr>
+                    <p>Para convertir entre estas unidades, simplemente ingresa la cantidad en la unidad de origen y obtén los resultados en las unidades deseadas. La calculadora realiza automáticamente los cálculos necesarios para que puedas trabajar con distintas escalas de temperatura de manera fácil y rápida.</p>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script src="Temperatura.js"></script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculadoraCientifica</title>
+        <link rel="stylesheet" type="text/css" href="Cientifica.css">
+        <link rel="icon" href="calculadoraCientifica.png">
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Calculadora Cientifica</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section>
+                    <form>
+                        <input type="text" id="pantalla" readonly>
+                        <div class="contenedorBotones">
+                            <div class="botones1">
+                                <input type="button" value="^2" onclick="insertText('^2')">
+                                <input type="button" value="^3" onclick="insertText('^3')">
+                                <input type="button" value="2√" onclick="insertText('2√(')">
+                                <input type="button" value="3√" onclick="insertText('3√(')">
+                                <input type="button" value="log" onclick="insertText('log(')">
+                                <input type="button" value="^" onclick="insertText('^')">
+                                <input type="button" value="sin" onclick="insertText('sin(')">
+                                <input type="button" value="cos" onclick="insertText('cos(')">
+                                <input type="button" value="tan" onclick="insertText('tan(')">
+                                <input type="button" value="(" onclick="insertText('(')">
+                                <input type="button" value=")" onclick="insertText(')')">
+                                <input type="button" value="π" onclick="insertText('π')">
+                            </div>
+                            <div class="botones2">
+                                <input type="button" value="7" onclick="insertText('7')">
+                                <input type="button" value="8" onclick="insertText('8')">
+                                <input type="button" value="9" onclick="insertText('9')">
+                                <input type="button" value="DEL" class="eliminar" onclick="deleteLastChar()">
+                                <input type="button" value="C" class="eliminar" onclick="clearDisplay()">
+                                <input type="button" value="4" onclick="insertText('4')">
+                                <input type="button" value="5" onclick="insertText('5')">
+                                <input type="button" value="6" onclick="insertText('6')">
+                                <input type="button" value="x" onclick="insertText('*')">
+                                <input type="button" value="÷" onclick="insertText('/')">
+                                <input type="button" value="1" onclick="insertText('1')">
+                                <input type="button" value="2" onclick="insertText('2')">
+                                <input type="button" value="3" onclick="insertText('3')">
+                                <input type="button" value="+" onclick="insertText('+')">
+                                <input type="button" value="-" onclick="insertText('-')">
+                                <input type="button" value="0" onclick="insertText('0')">
+                                <input type="button" value="." onclick="insertText('.')">
+                                <input type="button" value="EXP" onclick="insertText('EXP(')">
+                                <input type="button" value="Ans" onclick="insertAns()" >
+                                <input type="button" value="=" class="igual" onclick="calculate()">
+                            </div>
+                        </div>
+                    </form>
+                </section>
+                <section class="section2">
+                    <h2>Historial de Cálculos</h2>
+                    <hr><br>
+                    <ul id="historial-list"></ul>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+                Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+                La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script src="Cientifica.js"></script>
+    </body>
+</html>

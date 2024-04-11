@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de Longitud</title>
+        <link rel="stylesheet" type="text/css" href="Longitud.css">
+        <link rel="icon" href="conversorLongitud.png">
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Conversor de Longitud</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="section1">
+                    <h3>Conversor de Longitud</h3>
+                    <hr>
+                    
+                    <form class="form1">
+                        <div>
+                            De
+                            <input type="text" id="VInicial">
+                            <select id="unidad1">
+                                <option value="milimetros">Milímetros</option>
+                                <option value="centimetros">Centímetros</option>
+                                <option value="decimetros">Decímetros</option>
+                                <option value="metros">Metros</option>
+                                <option value="decametros">Decámetros</option>
+                                <option value="hectometros">Hectómetros</option>
+                                <option value="kilometros">Kilómetros</option>
+                                <option value="millas">Millas</option>
+                                <option value="pies">Pies</option>
+                                <option value="pulgadas">Pulgadas</option>
+                                <option value="yardas">Yardas</option>
+                                <option value="legua">Legua</option>
+                                <option value="nautica">Milla Náutica</option>
+                            </select>
+                        
+                            A
+                            <select id="unidad2">
+                                <option value="milimetros">Milímetros</option>
+                                <option value="centimetros">Centímetros</option>
+                                <option value="decimetros">Decímetros</option>
+                                <option value="metros">Metros</option>
+                                <option value="decametros">Decámetros</option>
+                                <option value="hectometros">Hectómetros</option>
+                                <option value="kilometros">Kilómetros</option>
+                                <option value="millas">Millas</option>
+                                <option value="pies">Pies</option>
+                                <option value="pulgadas">Pulgadas</option>
+                                <option value="yardas">Yardas</option>
+                                <option value="legua">Legua</option>
+                                <option value="nautica">Milla Náutica</option>
+                            </select><br>
+                        </div>
+                        <div><input type="text" class="Resultado" id="Resultado" readonly> </div>
+                           
+                        <input type="button" value="Calcular" onclick="calcularLongitud(); llenarTabla();">
+                        
+                    </form>
+                    
+                </section>
+                <section class="section2">
+                    <h3>Tabla de conversion general</h3>
+                    <div class="subdiv">
+                        <input type="text" id="num" readonly>
+                        <input type="text" id="unidad" readonly>
+                    </div>
+                    <hr>
+                    <form class="form2">
+                        <div><label>Milímetros</label><input type="text" id="milimetros" readonly></div>
+                        <div><label>Centímetros</label><input type="text" id="centimetros" readonly></div>
+                        <div><label>Decímetros</label><input type="text" id="decimetros" readonly></div>
+                        <div><label>Metros</label><input type="text" id="metros" readonly></div>
+                        <div><label>Decámetros</label><input type="text" id="decametros" readonly></div>
+                        <div><label>Hectómetros</label><input type="text" id="hectometros" readonly></div>
+                        <div><label>Kilómetros</label><input type="text" id="kilometros" readonly></div>
+                        <div><label>Millas</label><input type="text" id="millas" readonly></div>
+                        <div><label>Pies</label><input type="text" id="pies" readonly></div>
+                        <div><label>Pulgadas</label><input type="text" id="pulgadas" readonly></div>
+                        <div><label>Yardas</label><input type="text" id="yardas" readonly></div>
+                        <div><label>Legua</label><input type="text" id="legua" readonly></div>
+                        <div><label>Náutica</label><input type="text" id="nautica" readonly></div>
+                    </form>  
+                </section>
+                <section class="section3">
+                    <div>
+                        <h2>Unidades de Longitud y Conversiones</h2>
+                        <p>El conversor de longitud te permite convertir entre diversas unidades de medida. Aquí tienes una lista de las unidades disponibles:</p>
+                    </div>
+                    
+                    <hr>
+                    <ul>
+                        <li><strong>Milímetros (mm):</strong> La unidad más pequeña en el sistema métrico.</li>
+                        <li><strong>Centímetros (cm):</strong> Diez milímetros forman un centímetro.</li>
+                        <li><strong>Decímetros (dm):</strong> Diez centímetros equivalen a un decímetro.</li>
+                        <li><strong>Metros (m):</strong> Básica unidad de longitud en el sistema métrico.</li>
+                        <li><strong>Decámetros (dam):</strong> Diez metros conforman un decámetro.</li>
+                        <li><strong>Hectómetros (hm):</strong> Cien metros equivalen a un hectómetro.</li>
+                        <li><strong>Kilómetros (km):</strong> Mil metros forman un kilómetro.</li>
+                        <li><strong>Millas:</strong> Una medida común en países que no utilizan el sistema métrico.</li>
+                        <li><strong>Pies (ft):</strong> Ampliamente utilizado en países que utilizan el sistema imperial.</li>
+                        <li><strong>Pulgadas (in):</strong> Doce pulgadas forman un pie.</li>
+                        <li><strong>Yardas (yd):</strong> Tres pies equivalen a una yarda.</li>
+                        <li><strong>Legua:</strong> Antigua unidad de longitud, generalmente medida en términos de millas.</li>
+                        <li><strong>Milla Náutica:</strong> Utilizada en navegación marítima.</li>
+                    </ul>
+                    <hr>
+                    <p>Para convertir entre estas unidades, simplemente ingresa la cantidad en la unidad de origen y obtén los resultados en las unidades deseadas. La calculadora realiza automáticamente los cálculos necesarios para que puedas trabajar con distintas escalas de longitud de manera fácil y rápida.</p>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+            
+        <script src="longitud.js"></script>
+    </body>
+</html>

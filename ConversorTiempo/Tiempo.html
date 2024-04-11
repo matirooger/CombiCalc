@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de Tiempo</title>
+        <link rel="stylesheet" type="text/css" href="Tiempo.css">
+        <link rel="icon" href="Tiempo.png">
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Conversor de Tiempo</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!--SECCION 1-->
+                <section class="section1">
+                    <h3>Conversor de Temperatura</h3>
+                    <hr>
+                    <form class="form1">
+                        <div>
+                            De
+                            <input type="text" id="NumeroInicial">
+                            <select id="select1">
+                                <option value="Segundos">Segundos</option>
+                                <option value="Minutos">Minutos</option>
+                                <option value="Horas">Horas</option>
+                                <option value="Días">Días</option>
+                                <option value="Semanas">Semanas</option>
+                                <option value="Meses">Meses</option>
+                                <option value="Años">Años</option>
+                            </select>
+                            
+                            A
+                            <select id="select2">
+                                <option value="Segundos">Segundos</option>
+                                <option value="Minutos">Minutos</option>
+                                <option value="Horas">Horas</option>
+                                <option value="Días">Días</option>
+                                <option value="Semanas">Semanas</option>
+                                <option value="Meses">Meses</option>
+                                <option value="Años">Años</option>
+                            </select>
+                        </div>
+                        <div><input type="text" class="Resultado" id="Resultado" readonly></div>
+                        <input type="button" value="Calcular" onclick="calcularTiempo(); llenarTablaTiempo();">
+                    </form>
+                </section>
+
+                <!--SECCION 2-->
+
+                <section class="section2">
+                    <h3>Tabla de conversion general</h3>
+                    <div class="subdiv">
+                        <input type="text" id="num" readonly>
+                        <input type="text" id="unidad" readonly>
+                    </div>
+                    <hr>
+                    <form class="form2">
+                        <div><label>Segundos</label><input type="text" id="Segundos" readonly></div>
+                        <div><label>Minutos</label><input type="text" id="Minutos" readonly></div>
+                        <div><label>Horas</label><input type="text" id="Horas" readonly></div>
+                        <div><label>Días</label><input type="text" id="Dias" readonly></div>
+                        <div><label>Semanas</label><input type="text" id="Semanas" readonly></div>
+                        <div><label>Meses</label><input type="text" id="Meses" readonly></div>
+                        <div><label>Años</label><input type="text" id="Años" readonly></div>
+                    </form>
+                </section>
+                <section class="section3">
+                    <div>
+                        <h2>Unidades de Tiempo y Conversiones</h2>
+                        <p>El conversor de tiempo te permite convertir entre diversas unidades de medida. Aquí tienes una lista de las unidades disponibles:</p>
+                    </div>
+                    <hr>
+                    <ul>
+                        <li><strong>Segundos (s):</strong> La unidad básica de tiempo en el sistema internacional.</li>
+                        <li><strong>Minutos (min):</strong> Sesenta segundos forman un minuto.</li>
+                        <li><strong>Horas (h):</strong> Sesenta minutos equivalen a una hora.</li>
+                        <li><strong>Días (d):</strong> Veinticuatro horas conforman un día.</li>
+                        <li><strong>Semanas (sem):</strong> Siete días forman una semana.</li>
+                        <li><strong>Meses (mes):</strong> El tiempo puede variar entre 28 y 31 días dependiendo del mes y del año.</li>
+                        <li><strong>Años (año):</strong> Doce meses conforman un año.</li>
+                    </ul>
+                    <hr>
+                    <p>Para convertir entre estas unidades, simplemente ingresa la cantidad en la unidad de origen y obtén los resultados en las unidades deseadas. La calculadora realiza automáticamente los cálculos necesarios para que puedas trabajar con distintas escalas de tiempo de manera fácil y rápida.</p>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script src="Tiempo.js"></script>
+    </body>
+</html>

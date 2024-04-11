@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculadora de Porcentaje</title>
+        <link rel="stylesheet" type="text/css" href="porcentaje.css">
+        <link rel="icon" href="Porcentaje.png">
+
+        <meta charset="UTF-8" >
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Calculadora de Porcentaje</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <!--Seccion de "El porcentaje de una cantidad"-->
+                <section>
+                    <h3>Calcular el porcentaje de una cantidad</h3><hr>
+                    <p>Calcular el porcentaje de una cantidad implica 
+                        determinar la proporción que representa esa cantidad con respecto a un total del 100%.</p>
+                    <form>
+                        El   
+                        <input type="text" id="dato1"> % de
+                        <input type="text" id="dato2"> es:<br>
+                        <input type="text" id="resultado" readonly><br>
+                        <input type="button" value="Borrar" onclick="borrarCampos()">
+                        <input type="button" value="Calcular" onclick="calcularPorcentaje()">
+                    </form>
+                </section>
+                <!--Seccion de Añadir un porcentaje a un cantidad-->
+                <section>
+                    <h3>Añadir un porcentaje a una cantidad</h3><hr>
+                    <p>Añadir un porcentaje a una cantidad implica aumentar 
+                        dicha cantidad en una proporción específica del 100%
+                    </p>
+                    <form>
+                        Si la cantidad inicial es 
+                        <input type="text" id="dato3">
+                        y desea Añadir 
+                        <input type="text" id="dato4">
+                        % la cantidad final es:<br>
+                        <input type="text" id="resultado2" readonly><br>
+                        <input type="button" value="Borrar" onclick="borrarCampos2()">
+                        <input type="button" value="Calcular" onclick="calcularCantidadConPorcentaje()">
+                    </form>
+                </section>
+                <!--Seccion de Restar un porcentaje a una cantidad-->
+                <section>
+                    <h3>Restar un porcentaje a una cantidad</h3><hr>
+                    <p>Restar un porcentaje a una cantidad implica reducir 
+                       dicha cantidad en una proporción específica del 100%.</p>
+                    <form>
+                        Si la cantidad inicial es 
+                        <input type="text" id="dato5">
+                        y desea Restar 
+                        <input type="text" id="dato6">
+                        % la cantidad final es:<br>
+                        <input type="text" id="resultado3" readonly><br>
+                        <input type="button" value="Borrar" onclick="borrarCampos3()">
+                        <input type="button" value="Calcular" onclick="restarPorcentaje()">
+                    </form>
+                </section>
+                <!--Seccion de cambio Porcentual-->
+                <section>
+                    <h3>Cambio Porcentual</h3><hr>
+                    <p>El cambio porcentual es una medida que cuantifica la variación relativa entre dos valores expresada
+                       en porcentaje. Se utiliza para evaluar la magnitud del cambio experimentado por una cantidad con respecto
+                       a su valor inicial.</p>
+                    <form>
+                        El cambio porcentual entre 
+                        <input type="text" id="dato7">
+                        y 
+                        <input type="text" id="dato8">
+                        es:<br>
+                        <input type="text" id="resultado4" readonly>%<br>
+                        <input type="button" value="Borrar" onclick="borrarCampos4()">
+                        <input type="button" value="Calcular" onclick="calcularCambioPorcentual()">
+                    </form>
+                </section>
+                <!--Seccion de Calcular el porcentaje del total de un numero-->
+                <section>
+                    <h3>Calcular el porcentaje del total de un numero</h3><hr>
+                    <p>Calcular el porcentaje del total de un número implica determinar 
+                       qué parte de ese número representa en relación con un total del 100%.</p>
+                    <form>
+                        Si 
+                        <input type="text" id="dato9">
+                        es el total, 
+                        <input type="text" id="dato10">
+                        es el:<br>
+                        <input type="text" id="resultado5" readonly>%<br>
+                        <input type="button" value="Borrar" onclick="borrarCampos5()">
+                        <input type="button" value="Calcular" onclick="calcularPorcentajeDelTotal()">
+                    </form>
+                </section>
+                <!--Seccion de Calcular el numero total si se sabe el porcentaje-->
+                <section>
+                    <h3>Calcular el numero total si se sabe el porcentaje</h3><hr>
+                    <p>Calcular el número total cuando se conoce el porcentaje implica encontrar
+                    la cantidad total a partir de una parte expresada como un porcentaje.</p>
+                    <form>
+                        ¿<input type="text" id="dato11">
+                        es 
+                        <input type="text" id="dato12">
+                        % de que numero?<br>
+                        <input type="text" id="resultado6" readonly><br>
+                        <input type="button" value="Borrar" onclick="borrarCampos6()">
+                        <input type="button" value="Calcular" onclick="calcularNumeroTotal()">
+                    </form>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script>
+
+            //Para que funcione el menu
+
+            const menuButton = document.getElementById('menu-button');
+            const navbar = document.getElementById('myNavbar');
+
+            menuButton.addEventListener('click', (event) => {
+            // Evita que el clic en el botón cierre el menú inmediatamente
+            event.stopPropagation();
+
+            if (navbar.style.display === 'block') {
+                navbar.style.display = 'none';
+            } else {
+                navbar.style.display = 'block';
+            }
+            });
+
+            document.addEventListener('click', (event) => {
+            // Comprueba si el menú está abierto y si el clic no ocurrió dentro del menú
+            if (navbar.style.display === 'block' && event.target !== menuButton && !navbar.contains(event.target)) {
+                navbar.style.display = 'none';
+            }
+            });
+
+            //TODO SOBRE LA CALCULADORA  
+            
+            // FUNCION PARA AGREGAR EL PORCENTAJE A UNA CANTIDAD
+
+            function calcularPorcentaje() {
+                // Obtener los valores de los campos de entrada
+                const porcentaje = parseFloat(document.getElementById('dato1').value);
+                const total = parseFloat(document.getElementById('dato2').value);
+
+                // Calcular el resultado
+                const resultado = (total * porcentaje) / 100;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado').value = resultado;
+            }
+            function borrarCampos() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato1').value = '';
+                document.getElementById('dato2').value = '';
+                document.getElementById('resultado').value = '';
+            }
+
+            // FUNCIÓN PARA AÑADIR UN PORCENTAJE A UNA CANTIDAD
+
+            function calcularCantidadConPorcentaje() {
+                // Obtener los valores de los campos de entrada
+                const cantidadInicial = parseFloat(document.getElementById('dato3').value);
+                const porcentajeAnadir = parseFloat(document.getElementById('dato4').value);
+
+                // Calcular el resultado
+                const resultado = cantidadInicial + (cantidadInicial * porcentajeAnadir) / 100;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado2').value = resultado;
+            }
+            function borrarCampos2() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato3').value = '';
+                document.getElementById('dato4').value = '';
+                document.getElementById('resultado2').value = '';
+            }
+
+            //FUNCION PARA RESTAR UN PORCENTAJE A UNA CANTIDAD
+
+            function restarPorcentaje() {
+                // Obtener los valores de los campos de entrada
+                const cantidadInicialResta = parseFloat(document.getElementById('dato5').value);
+                const porcentajeARestar = parseFloat(document.getElementById('dato6').value);
+
+                // Calcular el resultado
+                const resultado = cantidadInicialResta - (cantidadInicialResta * porcentajeARestar) / 100;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado3').value = resultado;
+            }
+            function borrarCampos3() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato5').value = '';
+                document.getElementById('dato6').value = '';
+                document.getElementById('resultado3').value = '';
+            }
+
+            //FUNCION PARA CALCULAR EL CAMBIO PORCENTUAL
+
+            function calcularCambioPorcentual() {
+                // Obtener los valores de los campos de entrada
+                const valorInicial = parseFloat(document.getElementById('dato7').value);
+                const valorFinal = parseFloat(document.getElementById('dato8').value);
+
+                // Calcular el cambio porcentual
+                const cambioPorcentual = ((valorFinal - valorInicial) / valorInicial) * 100;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado4').value = cambioPorcentual;
+            }
+            function borrarCampos4() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato7').value = '';
+                document.getElementById('dato8').value = '';
+                document.getElementById('resultado4').value = '';
+            }
+
+            //FUNCION PARA CALCULAR EL PORCENTAJE TOTAL DE UN NUMERO
+
+            function calcularPorcentajeDelTotal() {
+                // Obtener los valores de los campos de entrada
+                const total = parseFloat(document.getElementById('dato9').value);
+                const parte = parseFloat(document.getElementById('dato10').value);
+
+                // Calcular el porcentaje del total
+                const porcentajeDelTotal = (parte / total) * 100;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado5').value = porcentajeDelTotal;
+            }
+            function borrarCampos5() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato9').value = '';
+                document.getElementById('dato10').value = '';
+                document.getElementById('resultado5').value = '';
+            }
+
+            //FUNCION PARA CALCULAR EL NUMERO TOTAL SI SE SABE EL PORCENTAJE
+            
+            function calcularNumeroTotal() {
+                // Obtener los valores de los campos de entrada
+                const porcentajeConocido = parseFloat(document.getElementById('dato12').value);
+                const parteConocida = parseFloat(document.getElementById('dato11').value);
+
+                // Calcular el número total
+                const numeroTotal = (parteConocida * 100) / porcentajeConocido;
+
+                // Mostrar el resultado en el campo de salida
+                document.getElementById('resultado6').value = numeroTotal;
+            }
+            function borrarCampos6() {
+                // Limpiar los campos de entrada y salida
+                document.getElementById('dato11').value = '';
+                document.getElementById('dato12').value = '';
+                document.getElementById('resultado6').value = '';
+            }
+
+
+
+
+
+        </script>
+    </body>
+</html>

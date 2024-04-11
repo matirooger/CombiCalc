@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ConviCalc</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="ImagenesCalc/calculadoraCientifica - copia.ico">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="menu">
+                <img id="menu-button" src="ImagenesCalc/lineas.png" alt="Menú">
+                <nav class="navbar" id="myNavbar">
+                    <ul>
+                        <li><a href="CalcSimple/simple.html">Calculadora Simple</a></li>
+                        <li><a href="CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                        <li><a href="CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                        <li><a href="ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                        <li><a href="ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                        <li><a href="ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                        <li><a href="ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                        <li><a href="ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="title">
+                <h1>🅲🅾🅼🅱🅸🅲🅰🅻🅲</h1>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <a href="CalcSimple/simple.html">
+                <section><!--Calculadora Simple-->
+                    <div>
+                        <img src="ImagenesCalc/calculadoraSimple.png" alt="Imagen representativa">
+                        <h3>Calculadora Simple</h3>
+                        <p>Una calculadora simple es un dispositivo o una aplicación que se utiliza para realizar 
+                            operaciones matemáticas básicas, como sumar, restar, multiplicar y dividir.</p>
+                    </div>
+                </section>
+            </a>
+            <a href="CalcCientifica/cientifica.html">
+                <section><!--Calculadora Cientifica-->
+                    <div>
+                        <img src="ImagenesCalc/calculadoraCientifica.png" alt="Imagen representativa">
+                        <h3>Calculadora Cientifica</h3>
+                        <p>Una calculadora científica incluye funciones avanzadas como trigonometría,
+                            álgebra, cálculo, estadísticas y otras operaciones complejas. </p>
+                    </div>
+                </section>
+            </a>
+            <a href="CalcPorcentaje/porcentaje.html">
+                <section><!--Calculadora de Porcentaje-->
+                    <div>
+                        <img src="ImagenesCalc/Porcentaje.png" alt="Imagen representativa">
+                        <h3>Calculadora de Porcentaje</h3>
+                        <p>Una calculadora de porcentaje es una herramienta que se utiliza para 
+                            calcular rápidamente el porcentaje de una cantidad en relación con otra cantidad.</p>
+                    </div>
+                </section>
+            </a>
+            <a href="ConverLongitud/Longitud.html">
+                <section><!--Conversor de Longitud-->
+                    <div>
+                        <img src="ImagenesCalc/conversorLongitud.png" alt="Imagen representativa">
+                        <h3>Conversor de Longitud</h3>
+                        <p>Un conversor de longitud es una herramienta que permite a los 
+                            usuarios convertir medidas de longitud o distancia de una unidad a otra.</p>
+                    </div>
+                </section>
+            </a>
+            <a href="ConversorPeso/Peso.html">
+                <section><!--Conversor de peso-->
+                    <div>
+                        <img src="ImagenesCalc/peso.png" alt="Imagen representativa">
+                        <h3>Conversor de Peso</h3>
+                        <p>Un conversor de peso es una herramienta que permite a 
+                            los usuarios convertir medidas de peso o masa de una unidad a otra.</p>
+                    </div>
+                </section>
+            </a>
+            <a href="ConversorVelocidad/Velocidad.html">
+                <section><!--Conversor de Velocidad-->
+                    <div>
+                        <img src="ImagenesCalc/Velocidad.png" alt="Imagen representativa">
+                        <h3>Conversor de Velocidad</h3>
+                        <p>Un conversor de velocidad es una herramienta que permite a los usuarios 
+                            convertir medidas de velocidad o rapidez de una unidad a otra.</p>
+                    </div>
+                </section>
+            </a>
+            <a href="ConversorTemperatura/Temperatura.html">
+                <section><!--Conversor de Temperatura-->
+                    <div>
+                        <img src="ImagenesCalc/temperatura.png" alt="Imagen representativa">
+                        <h3>Conversor de Temperatura</h3>
+                        <p>Un conversor de temperatura es una herramienta 
+                            que permite a los usuarios convertir medidas de temperatura de una escala a otra. </p>
+                    </div>
+                </section>
+            </a>
+            <a href="ConversorTiempo/Tiempo.html">
+                <section><!--Conversor de Tiempo-->
+                    <div>
+                        <img src="ImagenesCalc/Tiempo.png" alt="Imagen representativa">
+                        <h3>Conversor de Tiempo</h3>
+                        <p>Un conversor de tiempo es una herramienta que permite a 
+                            los usuarios convertir medidas de tiempo de una unidad a otra.</p>
+                    </div>
+                </section>
+            </a>
+        </div>
+    </main>
+    <footer>
+        
+        <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+        <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+    </footer>
+
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const navbar = document.getElementById('myNavbar');
+
+        menuButton.addEventListener('click', (event) => {
+        // Evita que el clic en el botón cierre el menú inmediatamente
+        event.stopPropagation();
+
+        if (navbar.style.display === 'block') {
+            navbar.style.display = 'none';
+        } else {
+            navbar.style.display = 'block';
+        }
+        });
+
+        document.addEventListener('click', (event) => {
+        // Comprueba si el menú está abierto y si el clic no ocurrió dentro del menú
+        if (navbar.style.display === 'block' && event.target !== menuButton && !navbar.contains(event.target)) {
+            navbar.style.display = 'none';
+        }
+        });
+
+
+    </script>
+</body>
+</html>

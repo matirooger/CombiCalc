@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de peso</title>
+        <link rel="stylesheet" type="text/css" href="Peso.css">
+        <link rel="icon" href="peso.png">
+
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <header>
+            <div class="header-content">
+                <div class="menu">
+                    <img id="menu-button" src="lineas.png" alt="Menú">
+                    <nav class="navbar" id="myNavbar">
+                        <ul>
+                            <li><a href="../index.html">Inicio</a></li>
+                            <li><a href="../CalcSimple/simple.html">Calculadora Simple</a></li>
+                            <li><a href="../CalcCientifica/cientifica.html">Calculadora Cientifica</a></li>
+                            <li><a href="../CalcPorcentaje/porcentaje.html">Calculadora de Porcentaje</a></li>
+                            <li><a href="../ConverLongitud/Longitud.html">Conversor de Longitud</a></li>
+                            <li><a href="../ConversorPeso/Peso.html">Conversor de Peso</a></li>
+                            <li><a href="../ConversorVelocidad/Velocidad.html">Conversor de Velocidad</a></li>
+                            <li><a href="../ConversorTemperatura/Temperatura.html">Conversor de Temperatura</a></li>
+                            <li><a href="../ConversorTiempo/Tiempo.html">Conversor de Tiempo</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="title">
+                    <h1>Conversor de Peso</h1>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <section class="section1">
+                    <h3>Conversor de Peso</h3>
+                    <hr>
+                    <form class="form1">
+                        <div>
+                            De
+                            <input type="text" id="NumeroInicial">
+                            <select id="select1">
+                                <option value="Miligramos">Miligramos</option>
+                                <option value="Gramos">Gramos</option>
+                                <option value="Kilogramos">Kilogramos</option>
+                                <option value="Toneladas">Toneladas</option>
+                                <option value="Libras">Libras</option>
+                                <option value="Onzas">Onzas</option>
+                                <option value="Quintal">Quintal</option>
+                                <option value="Stone">Stone</option>
+                            </select>
+                            A
+                            <select id="select2">
+                                <option value="Miligramos">Miligramos</option>
+                                <option value="Gramos">Gramos</option>
+                                <option value="Kilogramos">Kilogramos</option>
+                                <option value="Toneladas">Toneladas</option>
+                                <option value="Libras">Libras</option>
+                                <option value="Onzas">Onzas</option>
+                                <option value="Quintal">Quintal</option>
+                                <option value="Stone">Stone</option>
+                            </select>
+                        </div>
+                        <div><input type="text" class="Resultado" id="Resultado" readonly></div>
+                        <input type="button" value="Calcular" onclick="calcular(); llenarTablaPeso();">
+                    </form>
+                </section>
+                <section class="section2">
+                    <h3>Tabla de conversion general</h3>
+                    <div class="subdiv">
+                        <input type="text" id="num" readonly>
+                        <input type="text" id="unidad" readonly>
+                    </div>
+                    <hr>
+                    <form class="form2">
+                        <div><label>Miligramos</label><input type="text" id="Miligramos" readonly></div>
+                        <div><label>Gramos</label><input type="text" id="Gramos" readonly></div>
+                        <div><label>Kilogramos</label><input type="text" id="Kilogramos" readonly></div>
+                        <div><label>Toneladas</label><input type="text" id="Toneladas" readonly></div>
+                        <div><label>Libras</label><input type="text" id="Libras" readonly></div>
+                        <div><label>Onzas</label><input type="text" id="Onzas" readonly></div>
+                        <div><label>Quintal</label><input type="text" id="Quintal" readonly></div>
+                        <div><label>Stone</label><input type="text" id="Stone" readonly></div>
+                    </form>
+                    
+                </section>
+                <section class="section3">
+                    
+                    <div>
+                        <h2>Unidades de Peso y Conversiones</h2>
+                        <p>El conversor de peso te permite convertir entre diversas unidades de medida. Aquí tienes una lista de las unidades disponibles:</p>
+                    </div>
+                    <hr>
+                
+                    <ul>
+                        <li><strong>Miligramos (mg):</strong> La unidad más pequeña en el sistema métrico, equivalente a una milésima parte de un gramo.</li>
+                        <li><strong>Gramos (g):</strong> La unidad básica de peso en el sistema métrico, equivalente a mil miligramos.</li>
+                        <li><strong>Kilogramos (kg):</strong> Mil gramos forman un kilogramo, una medida comúnmente utilizada en la vida diaria.</li>
+                        <li><strong>Toneladas (t):</strong> Mil kilogramos forman una tonelada, una unidad de medida más grande utilizada en contextos industriales.</li>
+                        <li><strong>Libras (lb):</strong> Utilizada en el sistema imperial, una libra equivale aproximadamente a 0.453592 kilogramos.</li>
+                        <li><strong>Onzas (oz):</strong> Una onza es una medida más pequeña utilizada en ambos sistemas, donde una libra contiene 16 onzas.</li>
+                        <li><strong>Quintal:</strong> Equivalente a cien kilogramos.</li>
+                        <li><strong>Stone:</strong> Utilizado en algunos países, donde un stone equivale a catorce libras.</li>
+                    </ul>
+                    <hr>
+                    <p>Para convertir entre estas unidades, simplemente ingresa la cantidad en la unidad de origen y obtén los resultados en las unidades deseadas. La calculadora realiza automáticamente los cálculos necesarios para que puedas trabajar con distintas escalas de peso de manera fácil y rápida.</p>
+                </section>
+                
+            </div>
+        </main>
+        <footer>
+            <p>"Calculadora Integral: Tu solución matemática todo en uno. 
+            Simplifica tus cálculos diarios y proyectos más complejos con nuestra calculadora integral. 
+            La herramienta perfecta para tus necesidades matemáticas."</p>
+            <h5>"© 2023 ConviCalc. Todos los derechos reservados."</h5>
+        </footer>
+
+        <script src="Peso.js"></script>
+    </body>
+</html>

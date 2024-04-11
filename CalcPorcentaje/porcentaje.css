@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/*Parte del header*/
+header {
+    background-color: rgba(143, 143, 143, 0.7);
+    position: relative;
+    border-bottom: 2px solid #000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+.menu {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .navbar {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    width: 200px;
+  }
+  
+  .navbar li {
+    padding: 10px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #242222;
+  }
+  .navbar li:hover{
+    scale: 1.10;
+    background-color: bisque;
+  }
+  #menu-button {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+  }
+  
+
+/* Estilos para el título */
+.title {
+    flex-grow: 1;
+    text-align: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+h1 {
+    font-size: 60px;
+    margin: 0;
+    color:black;
+    letter-spacing: 5px;
+    font-weight: 1000;
+    text-shadow: 2px 2px 2px #fff, -2px -2px 2px #fff, 2px -2px 2px #fff, -2px 2px 2px #fff;
+
+}
+
+/*Parte del menu*/
+
+main{
+    max-width: 1200px;
+    margin:auto;
+    padding: 5%;
+    background-color: rgba(228, 224, 216, 0,7);
+    background-image: url("FondoCuadriculado.png"); /* Reemplaza 'ruta_de_la_imagen.jpg' con la ruta real de tu imagen */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-attachment: fixed; /* Fija la imagen de fondo para que no se desplace con el contenido */
+    background-clip: padding-box; /* Evita que la imagen se extienda por encima de los bordes del elemento */
+}
+.container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 50px;
+}
+section{
+    background-color: rgba(228, 224, 216, 0.9);
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border: 2px solid #000;
+
+}
+section h3{
+    padding: 25px;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+hr {
+    border: 1px solid #000; 
+    margin: 10px 0;
+  }
+section p{
+    font-size: 20px;
+    margin: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    padding: 30px 10px;
+    font-size: 21px;
+    font-family: monospace;
+}
+input[type="text"]{
+    margin: 0 10px;
+    background-color: rgb(189, 189, 189);
+    border: 2px solid #000;
+    border-radius: 10px;
+    font-size: 20px;
+    height: 25px;
+    width: 100px;
+    text-align: center;
+}
+input[type="text"]:nth-of-type(3){
+    background-color: rgb(189, 189, 189);
+    margin: 30px;
+    width: 20%;
+    height: 25px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    text-align: center;
+    color: darkgreen;
+    font-size: 20px;
+}
+input[type="button"]{
+    background-color: rgb(99, 151, 50);
+    font-size: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    margin: 20px;
+    padding: 10px;
+    width: 40%;
+    color: rgb(245, 248, 245);
+}
+input[type="button"]:hover{
+    scale: 1.05;
+    background-color: rgb(99, 204, 0);
+}
+
+/*PARTE DEL FOOTER*/
+
+footer{
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(167, 167, 167, 0.7);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-top: 2px solid #000;
+}
+
+/* Estilizar la barra de desplazamiento */
+
+::-webkit-scrollbar {
+    width: 5px; /* Ancho de la barra de desplazamiento */
+}
+::-webkit-scrollbar-thumb {
+    background: #6a6d6e; /* Color de fondo del pulgar */
+    border-radius: 6px; /* Radio de borde del pulgar */
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo de la pista */
+    border-radius: 6px; /* Radio de borde de la pista */
+}
+::-webkit-scrollbar-button {
+    display: none; /* Ocultar los botones de la barra de desplazamiento */
+}
+
+
+@media screen and (min-width: 550px) and (max-width: 751px){
+    /*TODO DEL HEADER*/
+    #menu-button {
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /*Barra de navegacion*/
+
+    .navbar{
+        background-color: rgb(54, 61, 65);  
+        width: 100vw;
+    }
+    .navbar ul {
+        list-style: none;
+        padding: 15px;
+        margin: 0;
+        width: 90vw;
+        text-align: center;
+    }
+    .navbar li{
+        margin: 10px;
+        border: 2px solid #000;
+    }
+    .navbar a{
+         color: #ccc;
+         font-size: 20px;
+    }
+    .navbar li:hover{
+        scale: 1.05;
+        background-color:rgb(99, 113, 121);
+    }
+    /*MAIN*/
+
+    form{
+        padding: 30px 10px;
+        font-size: 15px;
+        font-family: monospace;
+    }
+    section p{
+        font-size: 15px;
+    }
+    input[type="button"]{
+        width: 100%;
+        font-size: 15px;
+        padding: 5px;
+        margin: 5px;
+    }
+    input[type="text"]{
+        width: 25%;
+        height: 20px;
+        font-size: 18px;
+        margin: 5px;
+    }
+    input[type="text"]:nth-of-type(3){
+        width: 90%;
+        margin: 5px;
+        padding: 5px;
+        height: 20px;
+    }
+
+    /*FOOTER*/
+
+    footer{
+        padding: 10px;
+    }
+    footer p{
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 551px) {
+body{
+    background-color:rgba(167, 167, 167, 0.7);
+};
+   /*TODO DEL HEADER*/
+#menu-button {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+}
+h1 {
+    font-size: 1.5em;
+}
+
+/*Barra de navegacion*/
+
+.navbar{
+    background-color: rgb(54, 61, 65);  
+    width: 100vw;
+}
+.navbar ul {
+    list-style: none;
+    padding: 15px;
+    margin: 0;
+    width: 90vw;
+    text-align: center;
+}
+.navbar li{
+    margin: 10px;
+    border: 2px solid #000;
+}
+.navbar a{
+     color: #ccc;
+     font-size: 20px;
+}
+.navbar li:hover{
+    scale: 1.05;
+    background-color:rgb(99, 113, 121);
+}
+
+/*MAIN*/
+
+section h3{
+    font-size: 20px;
+}
+form{
+    padding: 30px 10px;
+    font-size: 15px;
+    font-family: monospace;
+}
+section p{
+    display: none;
+}
+input[type="button"]{
+    width: 100%;
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+}
+input[type="text"]{
+    width: 25%;
+    height: 20px;
+    font-size: 18px;
+    margin: 5px;
+}
+input[type="text"]:nth-of-type(3){
+    width: 90%;
+    margin: 5px;
+    padding: 5px;
+    height: 20px;
+}
+
+/*FOOTER*/
+
+footer{
+    padding: 10px;
+}
+footer p{
+    display: none;
+}
+
+}
